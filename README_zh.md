@@ -6,7 +6,7 @@
 
 <p align="center"><a href="README_zh.md">中文</a> | <a href="README.md">English</a> | <a href="README_ja.md">日本語</a></p>
 
-![界面预览](docs/302_Talking_Photo_zh.png)
+![界面预览](docs/302_Talking_Photo_cn.png)
 
 来自[302.AI](https://302.ai)的[ AI 照片说话 ](https://302.ai/tools/lipsync/)的开源版本。
 你可以直接登录302.AI，零代码零配置使用在线版本。
