@@ -63,9 +63,9 @@
 ## 开发&部署
 
 1. 克隆项目 `git clone https://github.com/302ai/302_lipsync`
-2. 安装依赖 `yarn install`
+2. 安装依赖 `pnpm install`
 3. 配置302的API KEY 参考.env.example
-4. 运行项目 `yarn run dev`
+4. 运行项目 `pnpm run dev`
 5. 打包部署 `docker build -t lipsync . && docker run -p 3000:3000 lipsync`
 
 ## ✨ 302.AI介绍 ✨
