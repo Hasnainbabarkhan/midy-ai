@@ -1,4 +1,4 @@
-# <p align="center">📷 AI照片说话 🚀✨</p>
+# <p align="center">📷🤖 AI照片说话 🚀✨</p>
 
 <p align="center">让照片开口说话</p>
 

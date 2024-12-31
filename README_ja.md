@@ -1,4 +1,4 @@
-# <p align="center">📷 AIトーキングフォト 🚀✨</p>
+# <p align="center">📷🤖 AIトーキングフォト 🚀✨</p>
 
 <p align="center">写真を口にして話す</p>
 
