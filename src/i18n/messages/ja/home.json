@@ -1,0 +1,132 @@
+{
+  "audio_tab": {
+    "generate": {
+      "azure": "Azure",
+      "clear_input_button_text": "入力内容をクリア",
+      "doubao": "豆包（ドウバオ）",
+      "download_button_text": "ダウンロード",
+      "female": "（女）",
+      "fish": "FishAudio",
+      "generate_button_text": "生成",
+      "generate_success": "生成成功",
+      "get_generate_audio_error": "生成されたオーディオの取得に失敗しました。再度生成してください",
+      "hint_button_text": "ヒント",
+      "hint_text_1": "最高の結果を得るために：",
+      "hint_text_2": "- テキスト入力には創造性を発揮してください。",
+      "hint_text_3": "- キャラクターの予想される性格に合ったトーンを選択してください。",
+      "hint_text_4": "- 感嘆符やその他の句読点を使用して、キャラクターに希望の反応を誘導してください！",
+      "hint_text_hover": "テキストからオーディオ生成のガイド（クリックしてガイドを表示）",
+      "history": {
+        "use": "使用"
+      },
+      "history_button_text": "履歴",
+      "history_none": "履歴なし",
+      "male": "（男）",
+      "minimax": "Minimax",
+      "no_speaker_options": "まずプラットフォームを選択してください",
+      "openai": "OpenAI",
+      "placeholder_language": "言語",
+      "placeholder_platform": "プラットフォーム",
+      "placeholder_speaker": "声を選択",
+      "send_generate_error": "オーディオ生成に失敗しました。再度生成してください",
+      "textarea_placeholder": "ここにキャラクターに言わせたいことを入力してください...",
+      "title": "生成"
+    },
+    "next_step_button_text": "次のステップ",
+    "record": {
+      "download": "ダウンロード",
+      "start_record": "録音開始",
+      "title": "録音"
+    },
+    "upload": {
+      "text_click": "クリック",
+      "text_drag": "ドラッグ＆ドロップまたはクリック",
+      "text_or": "または",
+      "text_support": "以下のフォーマットをサポート",
+      "title": "アップロード",
+      "upload_error": "アップロードに失敗しました。再度アップロードしてください"
+    },
+    "user_upload": {
+      "hint_text_1": "オーディオファイルをアップロード/録音すると、それにマッチングするビデオを生成します。",
+      "hint_text_2": "最高の結果を得るために：",
+      "hint_text_3": "- オーディオを短く保つ（<20秒）！",
+      "hint_text_4": "長いオーディオはビデオ生成時間が長くなります。",
+      "hint_text_5": "- オーディオが明瞭であればあるほど、ビデオの品質が良くなります。",
+      "hint_text_6": "最高の結果を得るために、バックグラウンドノイズとささやき声を最小限に抑えてください。",
+      "hint_text_7": "- 適切に使用してください！オーディオを選択する際には、知的財産権、プライバシー保護、著作権法を遵守してください。",
+      "upload_success": "アップロード成功"
+    }
+  },
+  "download_error_no_filename": "ダウンロードに失敗しました。ファイル名が空です",
+  "download_failed": "ダウンロードに失敗しました。再度ダウンロードしてください",
+  "download_success": "ダウンロード成功",
+  "generation_tab": {
+    "back_button": "前のステップ",
+    "download_button": "ダウンロード",
+    "generate_audio_error": "オーディオアップロードに失敗しました。オーディオが正常かどうかを確認し、再度生成してください",
+    "generate_error": "ビデオ生成に失敗しました。再度生成してください",
+    "generate_image_error": "画像アップロードに失敗しました。画像が合法かどうかを確認し、再度生成してください",
+    "generate_success": "ビデオ生成成功",
+    "hedra_error": {
+      "-1": "Hedra未知のエラー",
+      "underage": "画像安全チェックに失敗しました。以下の内容はガイドラインを満たしていません：未成年者が関与しています。コンテンツがガイドラインを満たしていることを確認してください。",
+      "celebrity": "画像安全チェックに失敗しました。以下の内容はガイドラインを満たしていません：有名人。コンテンツがガイドラインを満たしていることを確認してください。"
+    },
+    "hint_text_1": "生成中です。しばらくお待ちください...",
+    "hint_text_2": "生成プロセスが長いため、このページを閉じないでください",
+    "hint_text_no_video": "ビデオはまだ生成されていません",
+    "history_button": "履歴",
+    "make_new_button": "新しいビデオを作る",
+    "no_source_error": "生成エラーが発生しました。オーディオとポートレートのリンクが取得されませんでした",
+    "regenerate_button": "再生成"
+  },
+  "header": {
+    "title": "AI リップシンク"
+  },
+  "photo_tab": {
+    "generate": {
+      "download_text": "ダウンロード",
+      "generate_error_text": "ポートレート画像の生成に失敗しました。再度生成してください",
+      "generate_success_text": "ポートレート画像の生成に成功しました",
+      "generate_text": "生成",
+      "model_select_text": "モデルを選択",
+      "prompt_error_text": "入力内容の処理に失敗しました。入力内容を変更して再度生成してください",
+      "textarea_placeholder": "キャラクターを説明し、「生成」をクリックして画像を生成してください（例：Regal princess with a tiara.）",
+      "title": "生成",
+      "usage_text_1": "画像は後ほどここに表示されます"
+    },
+    "next_step_button_text": "ビデオ合成",
+    "prev_step_button_text": "前のステップ",
+    "record": {
+      "capture_text": "撮影",
+      "title": "撮影"
+    },
+    "upload": {
+      "delete_text": "削除",
+      "download_text": "ダウンロード",
+      "generate_hint_1": "画像生成ガイド",
+      "generate_hint_2": "「生成」ボタンを直接クリックすると、参考用例に基づいて直接結果が生成されます。説明を入力してから再度「生成」ボタンをクリックすると、ヒントに基づいて新しい結果を取得します。",
+      "generate_hint_3": "最高の結果を得るために：",
+      "generate_hint_4": "- すべてのフレーズをカンマで区切ってください。",
+      "generate_hint_5": "- まずスタイルを説明してください（カラー写真、白黒の木炭画）。",
+      "generate_hint_6": "- キャラクターを説明してください（アニメの女性、サイバーパンク戦士、90年代のシチュエーションコメディのキャラクター）。",
+      "generate_hint_7": "- カメラの位置を説明してください（クローズアップ、肩の上、正面カメラ）。",
+      "generate_hint_8": "- 背景を説明してください（夜の森、静かな街）。",
+      "generate_hint_9": "- 照明効果を説明してください（映画のような、ソフトライト、強い日差し）。",
+      "hint_text_1": "画像アップロードガイド",
+      "hint_text_2": "最高の結果を得るために：",
+      "hint_text_3": "- カメラに向かってください。",
+      "hint_text_4": "- 顔がはっきりと見えるようにしてください。",
+      "hint_text_5": "- 画像に自分だけが写っていることを確認してください。",
+      "hint_text_6": "- 動物や物体は予期しない結果になる可能性があります。",
+      "title": "アップロード",
+      "usage_text_1": "画像をここにドラッグ＆ドロップし、クリックしてアップロード",
+      "usage_text_2": "サポートされる画像フォーマット：.jpeg/.png/.webp"
+    }
+  },
+  "stepper": {
+    "audio_selection": "オーディオの設定",
+    "photo_selection": "ポートレートの設定",
+    "video_generation": "ビデオ合成"
+  }
+}
