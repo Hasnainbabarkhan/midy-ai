@@ -62,11 +62,11 @@ Support the dark mode to protect your eyes.
 
 ## Development & Deployment
 
-1. Clone the project: `git clone https://github.com/302ai/302_pic_speak`
+1. Clone the project: `git clone https://github.com/302ai/302_lipsync`
 2. Install dependencies: `pnpm install`
 3. Configure environment variables: Refer to .env.example
 4. Run the project: `pnpm prisma generate && pnpm dev`
-5. Build and deploy: `docker build -t pic_speak . && docker run -p 3000:3000 pic_speak`
+5. Build and deploy: `docker build -t lipsync . && docker run -p 3000:3000 lipsync`
 
 ## ✨ About 302.AI ✨
 

@@ -62,11 +62,11 @@
 
 ## 開発&デプロイ
 
-1. プロジェクトをクローン: `git clone https://github.com/302ai/pic_speak`
+1. プロジェクトをクローン: `git clone https://github.com/302ai/302_lipsync`
 2. 依存関係をインストール: `pnpm install`
 3. 環境変数を設定: .env.example を参照
 4. プロジェクトを実行: `pnpm prisma generate && pnpm dev`
-5. ビルドとデプロイ: `docker build -t pic_speak . && docker run -p 3000:3000 pic_speak`
+5. ビルドとデプロイ: `docker build -t lipsync . && docker run -p 3000:3000 lipsync`
 
 ## ✨ 302.AIについて ✨
 
