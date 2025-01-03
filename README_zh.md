@@ -1,24 +1,26 @@
-# <p align="center">📷🤖 AI照片说话 🚀✨</p>
+# <p align="center">📷 AI 照片说话 🚀✨</p>
 
-<p align="center">让照片开口说话</p>
+<p align="center">通过上传图片，根据提交的音频文件生成口型并合成视频，实现让照片开口说话.</p>
 
-<p align="center"><a href="https://302.ai/tools/lipsync/" target="blank"><img src="https://file.302ai.cn/gpt/imgs/github/302_badge.png" /></a></p >
+<p align="center"><a href="https://302.ai/tools/lipsync/" target="blank"><img src="https://file.302.ai/gpt/imgs/github/20250102/72a57c4263944b73bf521830878ae39a.png" /></a></p >
 
 <p align="center"><a href="README_zh.md">中文</a> | <a href="README.md">English</a> | <a href="README_ja.md">日本語</a></p>
 
-![界面预览](docs/302_Talking_Photo_cn.png)
+![](docs/302_Talking_Photo_cn.png)
 
-来自[302.AI](https://302.ai)的[ AI 照片说话 ](https://302.ai/tools/lipsync/)的开源版本。
+来自[302.AI](https://302.ai)的[AI 照片说话](https://302.ai/tools/lipsync/)的开源版本。
 你可以直接登录302.AI，零代码零配置使用在线版本。
 或者对本项目根据自己的需求进行修改，传入302.AI的API KEY，自行部署。
 
 ## 界面预览
+可在生成页输入一段希望照片开口说出的文本内容，可以选择语音模型和不同语音包将文本转化成音频文件；也可以在上传页直接选择音频文件上传。
+![](docs/302_AI_Talking_Photo_screenshot_01.png)          
 
-### 基于<a href="https://doc.302.ai/api-226162518">Hedra</a>，通过上传图片，根据提交的音频文件生成口型并合成视频，实现让照片开口说话
+可在生成页通过输入对照片的描述来生成一张人物照片，也可以在上传页直接上传一张清晰的正面人像。
+![](docs/302_AI_Talking_Photo_screenshot_02.png)         
 
-![界面预览](docs/pic-1.png)
-![界面预览](docs/pic-2.png)
-![界面预览](docs/pic-3.png)
+点击合成音频后开始生成，最后可得到一段照片开口将音频“说出”的视频。
+![](docs/302_AI_Talking_Photo_screenshot_03.png)
 
 ## 项目特性
 
