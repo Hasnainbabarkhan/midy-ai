@@ -1,24 +1,26 @@
-# <p align="center">📷🤖 AIトーキングフォト 🚀✨</p>
+# <p align="center">📷 AIトーキングフォト 🚀✨</p>
 
-<p align="center">写真を口にして話す</p>
+<p align="center">画像をアップロードすることで、提出された音声ファイルから口型を生成して動画を合成し、写真を口にして話すことを実現します。</p>
 
-<p align="center"><a href="https://302.ai/tools/lipsync/" target="blank"><img src="https://file.302ai.cn/gpt/imgs/github/302_badge.png" /></a></p >
+<p align="center"><a href="https://302.ai/ja/tools/lipsync/" target="blank"><img src="https://file.302.ai/gpt/imgs/github/20250102/72a57c4263944b73bf521830878ae39a.png" /></a></p >
 
 <p align="center"><a href="README_zh.md">中文</a> | <a href="README.md">English</a> | <a href="README_ja.md">日本語</a></p>
 
-![インターフェースプレビュー](docs/302_Talking_Photo_jp.png)
+![](docs/302_Talking_Photo_jp.png)
 
-[302.AI](https://302.ai/ja)の[AIトーキングフォト](https://302.ai/ja/tools/lipsync/)のオープンソースバージョン。
+[302.AI](https://302.ai/ja/)の[AIトーキングフォト](https://302.ai/ja/tools/lipsync/)のオープンソースバージョン。
 302.AIに直接ログインして、コードやコンフィグレーション不要でオンラインバージョンを使用できます。
 または、このプロジェクトを自分のニーズに合わせて変更し、302.AIのAPIキーを使用して独自にデプロイすることができます。
 
 ## インターフェースプレビュー
+生成ページに写真の開口部に言いたいテキストの内容を入力することができ、音声モデルと異なる音声パッケージを選択してテキストをオーディオファイルに変換することができ、アップロードページで直接オーディオファイルを選択してアップロードすることもできます。
+![](docs/302_AI_Talking_Photo_jp_screenshot_01.png)         
 
-### <a href="https://doc.302.ai/api-226162518">Hedra</a>に基づいて、画像をアップロードし、提出された音声ファイルに基づいて口の動きを生成し、ビデオを合成して、写真が話すようにする
+生成ページでは、写真の説明を入力することで人物写真を生成することも、アップロードページでははっきりした正面人物像を直接アップロードすることもできます。
+![](docs/302_AI_Talking_Photo_jp_screenshot_02.png)               
 
-![インターフェースプレビュー](docs/pic-1.png)
-![インターフェースプレビュー](docs/pic-2.png)
-![インターフェースプレビュー](docs/pic-3.png)
+合成音声をクリックして生成を開始すると、最後に写真の開口部で音声を「話す」ビデオが得られます。
+![](docs/302_AI_Talking_Photo_jp_screenshot_03.png)
 
 ## プロジェクトの特徴
 

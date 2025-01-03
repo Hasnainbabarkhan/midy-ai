@@ -1,24 +1,26 @@
-# <p align="center">📷🤖 AI Talking Photo 🚀✨</p>
+# <p align="center">📷 AI Talking Photo 🚀✨</p>
 
-<p align="center">Let the photo speak</p>
+<p align="center">By uploading the picture, the mouth shape is generated according to the submitted audio file and the video is synthesized to make the picture speak.</p>
 
-<p align="center"><a href="https://302.ai/tools/lipsync/" target="blank"><img src="https://file.302ai.cn/gpt/imgs/github/302_badge.png" /></a></p >
+<p align="center"><a href="https://302.ai/en/tools/lipsync/" target="blank"><img src="https://file.302.ai/gpt/imgs/github/20250102/72a57c4263944b73bf521830878ae39a.png" /></a></p >
 
 <p align="center"><a href="README_zh.md">中文</a> | <a href="README.md">English</a> | <a href="README_ja.md">日本語</a></p>
 
-![Interface Preview](docs/302_Talking_Photo_en.png)
+![](docs/302_Talking_Photo_en.png)
 
-This is the open-source version of [AI Talking Photo](https://302.ai/tools/lipsync/) from [302.AI](https://302.ai).
+This is the open-source version of [AI Talking Photo](https://302.ai/en/tools/lipsync/) from [302.AI](https://302.ai/en/).
 You can log in directly to 302.AI to use the online version with zero code and zero configuration.
 Alternatively, you can modify this project according to your needs, input 302.AI's API KEY, and deploy it yourself.
 
 ## Interface Preview
+You can input a text content that you want the photo to speak on the generation page, and you can choose a speech model and different speech packages to convert the text into an audio file; You can also choose to upload audio files directly on the upload page.
+![](docs/302_AI_Talking_Photo_en_screenshot_01.png)         
 
-### Based on <a href="https://doc.302.ai/api-226162518">Hedra</a> Using AI to create high-quality resumes
+You can generate a portrait photo by entering a description of the photo on the generation page, or upload a clear frontal portrait directly on the upload page.
+![](docs/302_AI_Talking_Photo_en_screenshot_02.png)            
 
-![Interface Preview](docs/pic-1.png)
-![Interface Preview](docs/pic-2.png)
-![Interface Preview](docs/pic-3.png)
+After clicking on the synthesized audio, it will start generating and finally obtain a video of a photo opening and "speaking" the audio.
+![](docs/302_AI_Talking_Photo_en_screenshot_03.png)
 
 ## Project Features
 
