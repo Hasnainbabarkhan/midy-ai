@@ -1,6 +1,6 @@
 # <p align="center">📷 AI 照片说话 🚀✨</p>
 
-<p align="center">通过上传图片，根据提交的音频文件生成口型并合成视频，实现让照片开口说话.</p>
+<p align="center">通过上传图片，根据提交的音频文件生成口型并合成视频，实现让照片开口说话。</p>
 
 <p align="center"><a href="https://302.ai/tools/lipsync/" target="blank"><img src="https://file.302.ai/gpt/imgs/github/20250102/72a57c4263944b73bf521830878ae39a.png" /></a></p >
 
