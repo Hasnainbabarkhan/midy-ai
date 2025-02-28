@@ -42,7 +42,7 @@ const TabsContent = (props: {
       >
         <Trigger value="generate">{t("home:audio_tab.generate.title")}</Trigger>
         <Trigger value="upload">{t("home:audio_tab.upload.title")}</Trigger>
-        {/* <Trigger value="record">{t("home:audio_tab.record.title")}</Trigger> */}
+        <Trigger value="record">{t("home:audio_tab.record.title")}</Trigger>
       </List>
     </Root>
   );

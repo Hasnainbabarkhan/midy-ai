@@ -16,8 +16,8 @@ class SessionDatabase extends Dexie {
 
   constructor() {
     super("MouthPhotoHistorySessions");
-    this.version(2).stores({
-      sessions: "++id, url,  ratio, inputText, createdAt, updatedAt",
+    this.version(3).stores({
+      sessions: "++id, url, ratio, inputText, createdAt, updatedAt",
     });
   }
 }

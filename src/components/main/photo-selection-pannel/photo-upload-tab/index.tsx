@@ -16,6 +16,7 @@ import AvatarEditor from "react-avatar-editor";
 import { mainContext } from "@/stores/main-context";
 import SKChaseLoading from "@/components/ui/sk-chase-loading";
 import { emitter } from "@/utils/mitt";
+import { AvatarMaker } from "../avatar-maker/avatar-maker";
 
 const PhotoUploadTab = (props: {
   onClickPrev: () => void;
@@ -38,7 +39,7 @@ const PhotoUploadTab = (props: {
 
   const infoStoreState = useLipsyncInfoStore();
 
-  const { imageUploadData, setImageUploadData } = infoStoreState;
+  const { imageUploadData, setImageUploadData, setVideoRatio } = infoStoreState;
 
   const [imageUrl, setImageUrl] = useState<string | null>(imageUploadData.url);
 
@@ -132,7 +133,10 @@ const PhotoUploadTab = (props: {
       <ImgContent
         ref={editor}
         ratio={ratio}
-        onChangeRatio={(newValue) => setRatio(newValue)}
+        onChangeRatio={(newRatio) => {
+          setRatio(newRatio);
+          setVideoRatio(newRatio);
+        }}
         imageUrl={imageUrl}
         // useless
         onChangeImage={(file) => onChangeImage(file)}
@@ -157,16 +161,30 @@ const PhotoUploadTab = (props: {
           </div>
         </div>
       </ImgContent>
-      <div className="mb-2 mt-2 flex flex-row flex-wrap justify-end gap-2">
-        <Button
-          variant="secondary"
+      <div className="mb-2 mt-2 flex flex-row justify-between">
+        <AvatarMaker
+          imageSrc={imageUrl || ""}
           disabled={!imageUrl}
-          onClick={() => onClickDelete()}
-        >
-          <MdDelete className="size-4" />
-          {t("home:photo_tab.upload.delete_text")}
-        </Button>
-        <DownloadButton fileUrl={imageUrl} />
+          onImageChange={(image) => {
+            setImageUrl(image);
+            setImageUploadData({
+              ...imageUploadData,
+              url: image,
+            });
+          }}
+        />
+
+        <div className="flex flex-row gap-2">
+          <Button
+            variant="secondary"
+            disabled={!imageUrl}
+            onClick={() => onClickDelete()}
+          >
+            <MdDelete className="size-4" />
+            {t("home:photo_tab.upload.delete_text")}
+          </Button>
+          <DownloadButton fileUrl={imageUrl} />
+        </div>
       </div>
       <div className="mt-2 flex flex-row flex-wrap justify-center gap-4">
         <Button

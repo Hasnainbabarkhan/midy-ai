@@ -18,7 +18,7 @@ class SessionDatabase extends Dexie {
 
   constructor() {
     super("MouthAudioHistorySessions");
-    this.version(1).stores({
+    this.version(2).stores({
       sessions:
         "++id, audioUrl, inputText, provider, lang, speaker, createdAt, updatedAt",
     });

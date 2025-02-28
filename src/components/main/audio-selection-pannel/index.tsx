@@ -59,15 +59,11 @@ const AudioSelectionPannel = (props: {
         <div
           className={`flex flex-1 flex-col ${ativeTab !== "record" && "hidden"}`}
         >
-          <AudioRecordTab />
+          <AudioRecordTab
+            onClickNext={(newAudioUrl) => onClickNext(newAudioUrl)}
+          />
         </div>
       </div>
-      {/* put to sub tab */}
-      {/* <div className="mt-2 flex flex-row justify-center">
-        <Button disabled={audioUrl === null} onClick={() => onClickNext()}>
-          {t("home:audio_tab.next_step_button_text")}
-        </Button>
-      </div> */}
     </div>
   );
 };

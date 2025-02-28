@@ -39,7 +39,7 @@ const useAuth = () => {
   const [isPending, setIsPending] = useState(false);
   const params = useSearchParams();
   const { replace } = useRouter();
-  const { isAuthPath, removeParams } = usePathUtils();
+  const { isAuthPath } = usePathUtils();
   const { t } = useClientTranslation();
 
   // Initialize form handling with react-hook-form and Zod resolver
@@ -130,7 +130,7 @@ const useAuth = () => {
         setIsPending(false);
       }
     },
-    [t, setError, isAuthPath, removeParams, replace]
+    [t, setError, isAuthPath, replace]
   );
 
   // Callback for form submission

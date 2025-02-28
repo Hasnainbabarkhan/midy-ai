@@ -22,6 +22,7 @@ export const env = createEnv({
     NEXT_PUBLIC_DEV_HOST_NAME: z.string().optional(),
     NEXT_PUBLIC_SHOW_BRAND: z.boolean(),
     NEXT_PUBLIC_DIALOGUE_API_URL: z.string().min(1),
+    NEXT_PUBLIC_GITHUB_REPO_URL: z.string().optional(),
   },
   // Runtime environment configuration
   runtimeEnv: {
@@ -43,6 +44,7 @@ export const env = createEnv({
     NEXT_PUBLIC_DEV_HOST_NAME: process.env.NEXT_PUBLIC_DEV_HOST_NAME,
     NEXT_PUBLIC_SHOW_BRAND: process.env.NEXT_PUBLIC_SHOW_BRAND === "true",
     NEXT_PUBLIC_DIALOGUE_API_URL: process.env.NEXT_PUBLIC_DIALOGUE_API_URL,
+    NEXT_PUBLIC_GITHUB_REPO_URL: process.env.NEXT_PUBLIC_GITHUB_REPO_URL,
   },
   // Handle validation errors
   onValidationError: (error: ZodError) => {

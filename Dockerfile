@@ -8,21 +8,25 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /app
 # Copy dependency files
 COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
+
+# Install corepack once in base image
+RUN npm install -g corepack@latest
+
 # Install dependencies according to package manager
 RUN \
-    if [ -f yarn.lock ]; then \
-        corepack enable && \
-        yarn --frozen-lockfile; \
-    elif [ -f package-lock.json ]; then \
-        npm config set registry https://registry.npmmirror.com && \
-        npm ci; \
-    elif [ -f pnpm-lock.yaml ]; then \
-        corepack enable pnpm && \
-        pnpm config set registry https://registry.npmmirror.com && \
-        pnpm i --frozen-lockfile; \
-    else \
-        echo "Lock file not found." && exit 1; \
-    fi
+  if [ -f yarn.lock ]; then \
+  corepack enable && \
+  yarn --frozen-lockfile; \
+  elif [ -f package-lock.json ]; then \
+  npm config set registry https://registry.npmmirror.com && \
+  npm ci; \
+  elif [ -f pnpm-lock.yaml ]; then \
+  corepack enable pnpm && \
+  pnpm config set registry https://registry.npmmirror.com && \
+  pnpm i --frozen-lockfile; \
+  else \
+  echo "Lock file not found." && exit 1; \
+  fi
 
 # Stage 2: Rebuild source code only when needed
 FROM base AS builder
@@ -39,7 +43,9 @@ COPY . .
 RUN cp ${ENV_FILE} .env
 
 # Execute build according to build mode
-RUN corepack enable pnpm && pnpm run build;
+RUN npm install -g corepack@latest && \
+  corepack enable pnpm && \
+  pnpm run build;
 
 # Stage 3: Production image, copy all files and run Next.js
 FROM base AS runner

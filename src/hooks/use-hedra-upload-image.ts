@@ -8,8 +8,8 @@ interface SuccessData {
 const useHedraUploadImage = () => {
   const logger = createScopedLogger("Home");
 
-  const ajaxUploadImageToHedra = async (file: File) => {
-    const url = "hedra/api/v1/portrait";
+  const ajaxUploadImageToHedra = async (file: File, aspectRatio: string) => {
+    const url = `hedra/api/v1/portrait?aspect_ratio=${aspectRatio}`;
     let result: string | null = null;
 
     const form = new FormData();

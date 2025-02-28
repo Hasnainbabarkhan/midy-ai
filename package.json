@@ -1,5 +1,5 @@
 {
-  "name": "302-starter",
+  "name": "302-ai-lip-sync",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,6 +12,7 @@
     "commit": "git-cz"
   },
   "dependencies": {
+    "@breezystack/lamejs": "^1.2.7",
     "@hookform/error-message": "^2.0.1",
     "@hookform/resolvers": "^3.9.0",
     "@radix-ui/react-alert-dialog": "^1.1.2",
@@ -33,6 +34,7 @@
     "@tailwindcss/typography": "^0.5.15",
     "accept-language": "^3.0.20",
     "ahooks": "^3.8.1",
+    "ai": "^3.4.27",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "cookies-next": "^4.3.0",
@@ -41,6 +43,7 @@
     "i18next": "^23.16.2",
     "i18next-browser-languagedetector": "^8.0.0",
     "i18next-resources-to-backend": "^1.2.1",
+    "idb": "^8.0.0",
     "immer": "^10.1.1",
     "iso-639-1": "^3.1.3",
     "jiti": "^2.3.3",
@@ -63,8 +66,10 @@
     "spinkit": "^2.0.1",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
-    "zod": "^3.23.8",
-    "zustand": "^5.0.0"
+    "uuid": "^10.0.0",
+    "zod": "^3.24.1",
+    "zustand": "^5.0.3",
+    "openai": "^4.68.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
@@ -76,6 +81,7 @@
     "@types/react": "^18.3.11",
     "@types/react-avatar-editor": "^13.0.3",
     "@types/react-dom": "^18.3.1",
+    "@types/uuid": "^10.0.0",
     "add": "^2.0.6",
     "commitizen": "^4.3.1",
     "eslint": "^8.57.1",
@@ -84,6 +90,7 @@
     "husky": "^9.1.6",
     "inquirer": "^9.3.7",
     "lint-staged": "^15.2.10",
+    "next-runtime-env": "^3.2.2",
     "postcss": "^8.4.47",
     "prettier-plugin-tailwindcss": "^0.6.8",
     "tailwindcss": "^3.4.14",

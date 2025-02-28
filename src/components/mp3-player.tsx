@@ -5,6 +5,7 @@ import { Slider } from "@/components/ui/slider";
 import { Pause, Play, Volume2, VolumeX } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
+import { getAudioDuration } from "@/lib/audio";
 
 interface MP3PlayerProps {
   audioSrc: string;
@@ -42,11 +43,20 @@ export default function MP3Player({
     }
   }, []);
 
-  const handleLoadedMetadata = useCallback(() => {
+  const handleLoadedMetadata = useCallback(async () => {
     if (audioRef.current) {
-      setDuration(audioRef.current.duration);
-      audioRef.current.volume = volume;
-      audioRef.current.playbackRate = speed;
+      const audio = audioRef.current;
+      const blobUrl = audio.src;
+
+      // Fetch the Blob from the Blob URL
+      const response = await fetch(blobUrl);
+      const blob = await response.blob();
+
+      const duration = await getAudioDuration(blob);
+      setDuration(duration);
+
+      audio.volume = volume;
+      audio.playbackRate = speed;
     }
   }, [volume, speed]);
 
@@ -85,7 +95,7 @@ export default function MP3Player({
         audio.removeEventListener("loadedmetadata", handleLoadedMetadata);
       }
     };
-  }, [handleTimeUpdate, handleLoadedMetadata]);
+  }, [handleTimeUpdate, handleLoadedMetadata, audioSrc]);
 
   const formatTime = (time: number) => {
     const minutes = Math.floor(time / 60);

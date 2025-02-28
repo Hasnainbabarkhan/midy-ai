@@ -37,6 +37,7 @@ const Main = () => {
     setImageUrl,
     setVideoUrl,
     reset,
+    videoRatio,
   } = infoStoreState;
 
   const stepper = useStepper(nowMainTab);
@@ -171,6 +172,7 @@ const Main = () => {
               <VideoGennerationPannel
                 imageUrl={imageUrl}
                 audioUrl={audioUrl}
+                videoRatio={videoRatio}
                 onClickBack={() => !loading && stepper.goTo("photo-selection")}
               />
             </div>

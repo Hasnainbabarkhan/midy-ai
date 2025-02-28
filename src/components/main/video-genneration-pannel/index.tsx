@@ -29,9 +29,10 @@ import useAjaxPost from "@/hooks/use-ajax-post";
 const VideoGennerationPannel = (props: {
   audioUrl: string | null;
   imageUrl: string | null;
+  videoRatio: string;
   onClickBack: () => void;
 }) => {
-  const { audioUrl, imageUrl, onClickBack } = props;
+  const { audioUrl, imageUrl, videoRatio, onClickBack } = props;
 
   const { generateVideo, setGenerateVideo, setLoading, reset } =
     useContext(mainContext);
@@ -55,8 +56,6 @@ const VideoGennerationPannel = (props: {
     jobId: string,
     updateProgress: (percentage: number) => void
   ) => {
-    // const jobIdNew = "582e61b3-0e22-4d97-ba4c-d7f7f3f10d53";
-    // const api = `hedra/api/v1/projects/${jobIdNew}`;
     const api = `hedra/projects/${jobId}`;
     let videoUrl: string | null = null;
     // try 100 times
@@ -94,7 +93,11 @@ const VideoGennerationPannel = (props: {
     return videoUrl;
   };
 
-  const ajaxGenerateVideoJobId = async (imageUrl: string, audioUrl: string) => {
+  const ajaxGenerateVideoJobId = async (
+    imageUrl: string,
+    audioUrl: string,
+    aspectRatio: string
+  ) => {
     if (!imageUrl || !audioUrl) {
       emitter.emit("ToastError", {
         code: -1,
@@ -111,6 +114,7 @@ const VideoGennerationPannel = (props: {
             avatarImage: imageUrl,
             audioSource: "audio",
             voiceUrl: audioUrl,
+            aspectRatio,
           },
         })
         .json<{ jobId: string }>();
@@ -203,7 +207,7 @@ const VideoGennerationPannel = (props: {
       return;
     }
 
-    const imageHedraUrl = await ajaxUploadImageToHedra(imageFile);
+    const imageHedraUrl = await ajaxUploadImageToHedra(imageFile, videoRatio);
 
     if (!imageHedraUrl) {
       // sync file to hedra failed
@@ -211,7 +215,11 @@ const VideoGennerationPannel = (props: {
       return;
     }
 
-    const videoId = await ajaxGenerateVideoJobId(imageHedraUrl, audioHedraUrl);
+    const videoId = await ajaxGenerateVideoJobId(
+      imageHedraUrl,
+      audioHedraUrl,
+      videoRatio
+    );
     // const videoId = "1";
     if (!videoId) {
       emitter.emit("ToastError", {

@@ -30,9 +30,10 @@ export const apiKy = ky.create({
       (request) => {
         const { apiKey, uiLanguage } = useAppStore.getState();
 
-        if (apiKey) {
-          request.headers.set("Authorization", `Bearer ${apiKey}`);
-        }
+        request.headers.set(
+          "Authorization",
+          `Bearer ${apiKey ?? env.NEXT_PUBLIC_302_API_KEY}`
+        );
 
         // Some 302 endpoints require the language to be set, so we set it here
         if (uiLanguage) {
@@ -53,7 +54,9 @@ export const apiKy = ky.create({
                 : langToCountry(uiLanguage);
 
             const message =
-              res.error[`message${countryCode ? `_${countryCode}` : ""}`];
+              res.error[
+                `message${countryCode && countryCode !== "en" ? `_${countryCode}` : ""}`
+              ];
             emitter.emit("ToastError", {
               code: res.error.err_code,
               message,

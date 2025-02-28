@@ -80,7 +80,8 @@ const PhotoGenerateTab = (props: {
 
   const infoStoreState = useLipsyncInfoStore();
 
-  const { imageGenerateData, setImageGenerateData } = infoStoreState;
+  const { imageGenerateData, setImageGenerateData, setVideoRatio } =
+    infoStoreState;
 
   const [imageUrl, setImageUrl] = useState<string | null>(
     imageGenerateData.url
@@ -118,7 +119,9 @@ const PhotoGenerateTab = (props: {
       },
     });
 
-    const result: string | null = resultRaw ? resultRaw.output : null;
+    const result: string | null = resultRaw
+      ? resultRaw.output.replace(/\\'/g, "'")
+      : null;
     return {
       result: result,
       errorHint: errorHint,
@@ -187,12 +190,14 @@ const PhotoGenerateTab = (props: {
       updatedAt: dayjs().valueOf(),
     };
     await save(historyItem);
+    setVideoRatio(ratio);
     setImageGenerateData(historyItem);
     setImageUrl(imageUrl);
     setLoading(false);
   };
 
   const onClickHistoryItem = (historyItem: HistoryItemType) => {
+    setVideoRatio(historyItem.ratio);
     setImageUrl(historyItem.url);
     setInputValue(historyItem.inputText);
     setImageGenerateData(historyItem);
@@ -231,7 +236,10 @@ const PhotoGenerateTab = (props: {
       <ImgContent
         ref={editor}
         ratio={ratio}
-        onChangeRatio={(newRatio) => setRatio(newRatio)}
+        onChangeRatio={(newRatio) => {
+          setRatio(newRatio);
+          setVideoRatio(newRatio);
+        }}
         imageUrl={imageUrl}
         onChangeImage={() => {}}
       >
