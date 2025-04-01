@@ -46,7 +46,7 @@ export default function AppLogo({
             alt="ai"
             priority
             className={cn("hidden dark:block", className)}
-            src="/images/global/logo-dark.png"
+            src="/images/global/logo-light.png"
             quality={quality}
             height={height}
             width={width}
@@ -56,7 +56,7 @@ export default function AppLogo({
             alt="ai"
             priority
             className={cn("dark:hidden", className)}
-            src="/images/global/logo-light.png"
+            src="/images/global/logo-dark.png"
             quality={quality}
             height={height}
             width={width}
